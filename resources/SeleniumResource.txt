@@ -1,0 +1,19 @@
+*** Settings ***
+Documentation     对Selenium相关操作进行二次封装，以适应项目的定制化需求
+Library           ../lib/CommonLib.py
+Library           ../lib/SeleniumLib.py
+
+*** Keywords ***
+打开并最大化浏览器
+    open browser    ${LEARNING_LOG_CFG["url"]}    ${LEARNING_LOG_CFG["browser"]}
+    Maximize Browser Window
+
+设置失败用例截图路径
+    ${screenshot_dir}=    获取失败用例截图路径    ${LOG FILE}
+    Set Screenshot Directory    ${screenshot_dir}
+
+点击并检查页面跳转
+    [Arguments]    ${click_element}    ${check_element}
+    [Documentation]    点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）
+    点击    ${click_element}
+    检查元素    ${check_element}

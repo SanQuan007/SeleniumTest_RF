@@ -1,0 +1,10 @@
+*** Settings ***
+Suite Setup       Suite Setup
+Suite Teardown    close browser
+Resource          ../ProjectResources/CommonResource.txt
+
+*** Keywords ***
+Suite Setup
+    设置失败用例截图路径
+    打开并最大化浏览器
+    登录

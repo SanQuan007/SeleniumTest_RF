@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200909 23:08:21.916" rpa="false">
+<suite id="s1" name="Suite" source="C:\workspaces\SeleniumTest\suite">
+<suite id="s1-s1" name="TestCases" source="C:\workspaces\SeleniumTest\suite\TestCases">
+<kw name="Suite Setup" type="setup">
+<kw name="设置失败用例截图路径" library="SeleniumResource">
+<kw name="获取失败用例截图路径" library="CommonLib">
+<arguments>
+<arg>${LOG FILE}</arg>
+</arguments>
+<assign>
+<var>${screenshot_dir}</var>
+</assign>
+<msg timestamp="20200909 23:08:23.108" level="INFO">${screenshot_dir} = C:\workspaces\SeleniumTest\log\screenshot\2020-09-09_23_08_23</msg>
+<status status="PASS" starttime="20200909 23:08:23.105" endtime="20200909 23:08:23.109"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLib">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${screenshot_dir}</arg>
+</arguments>
+<status status="PASS" starttime="20200909 23:08:23.114" endtime="20200909 23:08:23.116"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:23.104" endtime="20200909 23:08:23.118"></status>
+</kw>
+<kw name="打开并最大化浏览器" library="SeleniumResource">
+<kw name="Open Browser" library="SeleniumLib">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LEARNING_LOG_CFG["url"]}</arg>
+<arg>${LEARNING_LOG_CFG["browser"]}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:23.124" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<status status="PASS" starttime="20200909 23:08:23.120" endtime="20200909 23:08:36.923"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLib">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200909 23:08:36.924" endtime="20200909 23:08:39.068"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:23.119" endtime="20200909 23:08:39.069"></status>
+</kw>
+<kw name="登录" library="CommonResource">
+<doc>用户登录</doc>
+<kw name="点击并检查页面跳转" library="SeleniumResource">
+<doc>点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）</doc>
+<arguments>
+<arg>通用_首页_BUTTON_登录</arg>
+<arg>登录_首页_TITLE_输入账号</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>${click_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:39.076" level="INFO">Locato is 通用_首页_BUTTON_登录:xpath=//a[text()='登录']</msg>
+<msg timestamp="20200909 23:08:39.781" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.4095877528123191-1")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:39.072" endtime="20200909 23:08:42.166"></status>
+</kw>
+<kw name="检查元素" library="SeleniumLib">
+<arguments>
+<arg>${check_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:42.168" level="INFO">Locato is 登录_首页_TITLE_输入账号:xpath=//*[text()='Log in to your account.']</msg>
+<status status="PASS" starttime="20200909 23:08:42.167" endtime="20200909 23:08:42.717"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:39.071" endtime="20200909 23:08:42.717"></status>
+</kw>
+<kw name="输入文本" library="SeleniumLib">
+<arguments>
+<arg>登录_首页_INPUT_用户名</arg>
+<arg>${LEARNING_LOG_CFG["username"]}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:42.721" level="INFO">Locato is 登录_首页_INPUT_用户名:id=id_username</msg>
+<msg timestamp="20200909 23:08:43.098" level="INFO">Typing text 'admin' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.4472808529273209-2")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:42.720" endtime="20200909 23:08:43.557"></status>
+</kw>
+<kw name="输入文本" library="SeleniumLib">
+<arguments>
+<arg>登录_首页_INPUT_密码</arg>
+<arg>${LEARNING_LOG_CFG["password"]}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:43.561" level="INFO">Locato is 登录_首页_INPUT_密码:id=id_password</msg>
+<msg timestamp="20200909 23:08:43.756" level="INFO">Typing text 'admin@123' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.4472808529273209-3")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:43.558" endtime="20200909 23:08:45.560"></status>
+</kw>
+<kw name="点击并检查页面跳转" library="SeleniumResource">
+<doc>点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）</doc>
+<arguments>
+<arg>登录_首页_BUTTON_登录</arg>
+<arg>通用_首页_TEXT_你好</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>${click_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:45.566" level="INFO">Locato is 登录_首页_BUTTON_登录:name=submit</msg>
+<msg timestamp="20200909 23:08:45.661" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.4472808529273209-4")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:45.565" endtime="20200909 23:08:50.376"></status>
+</kw>
+<kw name="检查元素" library="SeleniumLib">
+<arguments>
+<arg>${check_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:50.378" level="INFO">Locato is 通用_首页_TEXT_你好:xpath=//a[contains(text(),'你好')]</msg>
+<status status="PASS" starttime="20200909 23:08:50.377" endtime="20200909 23:08:50.900"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:45.563" endtime="20200909 23:08:50.900"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:39.070" endtime="20200909 23:08:50.901"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:23.102" endtime="20200909 23:08:50.901"></status>
+</kw>
+<suite id="s1-s1-s1" name="学习笔记" source="C:\workspaces\SeleniumTest\suite\TestCases\学习笔记.txt">
+<test id="s1-s1-s1-t1" name="新建主题">
+<kw name="点击并检查页面跳转" library="SeleniumResource">
+<doc>点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）</doc>
+<arguments>
+<arg>通用_首页_BUTTON_主题</arg>
+<arg>主题_首页_TITLE_主题</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>${click_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:50.930" level="INFO">Locato is 通用_首页_BUTTON_主题:xpath=//a[text()='主题']</msg>
+<msg timestamp="20200909 23:08:51.438" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.8057617643228694-2")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:50.929" endtime="20200909 23:08:53.285"></status>
+</kw>
+<kw name="检查元素" library="SeleniumLib">
+<arguments>
+<arg>${check_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:53.287" level="INFO">Locato is 主题_首页_TITLE_主题:xpath=//h1[text()='主题']</msg>
+<status status="PASS" starttime="20200909 23:08:53.286" endtime="20200909 23:08:53.825"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:50.928" endtime="20200909 23:08:53.826"></status>
+</kw>
+<kw name="点击并检查页面跳转" library="SeleniumResource">
+<doc>点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）</doc>
+<arguments>
+<arg>主题_首页_BUTTON_新建主题</arg>
+<arg>主题_新建_TITLE_新主题</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>${click_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:53.829" level="INFO">Locato is 主题_首页_BUTTON_新建主题:xpath=//a[text()='新建主题']</msg>
+<msg timestamp="20200909 23:08:54.165" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.8643007427785563-2")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:53.828" endtime="20200909 23:08:55.979"></status>
+</kw>
+<kw name="检查元素" library="SeleniumLib">
+<arguments>
+<arg>${check_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:55.980" level="INFO">Locato is 主题_新建_TITLE_新主题:xpath=//h2[text()='添加一个新主题：']</msg>
+<status status="PASS" starttime="20200909 23:08:55.979" endtime="20200909 23:08:56.488"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:53.826" endtime="20200909 23:08:56.488"></status>
+</kw>
+<kw name="输入文本" library="SeleniumLib">
+<arguments>
+<arg>主题_新建_INPUT_主题名称</arg>
+<arg>这是一个测试主题01</arg>
+</arguments>
+<msg timestamp="20200909 23:08:56.490" level="INFO">Locato is 主题_新建_INPUT_主题名称:id=id_text</msg>
+<msg timestamp="20200909 23:08:56.731" level="INFO">Typing text '这是一个测试主题01' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.11106714073380775-2")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:56.489" endtime="20200909 23:08:57.603"></status>
+</kw>
+<kw name="点击并检查页面跳转" library="SeleniumResource">
+<doc>点击并验证界面跳转（点击某个元素之后，检查另一个期望元素的出现）</doc>
+<arguments>
+<arg>主题_新建_BUTTON_添加</arg>
+<arg>主题_首页_TITLE_主题</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>${click_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:08:57.605" level="INFO">Locato is 主题_新建_BUTTON_添加:name=submit</msg>
+<msg timestamp="20200909 23:08:57.830" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.11106714073380775-3")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:08:57.605" endtime="20200909 23:09:00.702"></status>
+</kw>
+<kw name="检查元素" library="SeleniumLib">
+<arguments>
+<arg>${check_element}</arg>
+</arguments>
+<msg timestamp="20200909 23:09:00.703" level="INFO">Locato is 主题_首页_TITLE_主题:xpath=//h1[text()='主题']</msg>
+<status status="PASS" starttime="20200909 23:09:00.703" endtime="20200909 23:09:01.127"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:57.604" endtime="20200909 23:09:01.128"></status>
+</kw>
+<kw name="检查文本" library="SeleniumLib">
+<arguments>
+<arg>这是一个测试主题01</arg>
+</arguments>
+<status status="PASS" starttime="20200909 23:09:01.129" endtime="20200909 23:09:01.541"></status>
+</kw>
+<kw name="删除主题" type="teardown">
+<arguments>
+<arg>这是一个测试主题01</arg>
+</arguments>
+<kw name="点击" library="SeleniumLib">
+<arguments>
+<arg>//a[text()='${topic}']/../small</arg>
+</arguments>
+<msg timestamp="20200909 23:09:01.625" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="60123624aa86057aaf2f73d0471960a2", element="0.15240435532826857-10")&gt;'.</msg>
+<status status="PASS" starttime="20200909 23:09:01.542" endtime="20200909 23:09:03.512"></status>
+</kw>
+<kw name="检查文本不存在" library="SeleniumLib">
+<arguments>
+<arg>${topic}</arg>
+</arguments>
+<status status="PASS" starttime="20200909 23:09:03.513" endtime="20200909 23:09:04.001"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:09:01.541" endtime="20200909 23:09:04.002"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:50.925" endtime="20200909 23:09:04.003" critical="yes"></status>
+</test>
+<doc>学习笔记的UI自动化用例测试套件</doc>
+<status status="PASS" starttime="20200909 23:08:50.902" endtime="20200909 23:09:04.006"></status>
+</suite>
+<kw name="Close Browser" library="SeleniumLib" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200909 23:09:04.015" endtime="20200909 23:09:07.481"></status>
+</kw>
+<status status="PASS" starttime="20200909 23:08:22.399" endtime="20200909 23:09:07.481"></status>
+</suite>
+<status status="PASS" starttime="20200909 23:08:22.241" endtime="20200909 23:09:07.490"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Suite">Suite</stat>
+<stat pass="1" fail="0" id="s1-s1" name="TestCases">Suite.TestCases</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="学习笔记">Suite.TestCases.学习笔记</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

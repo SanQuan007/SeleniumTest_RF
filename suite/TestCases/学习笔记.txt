@@ -1,0 +1,18 @@
+*** Settings ***
+Documentation     学习笔记的UI自动化用例测试套件
+Resource          ../ProjectResources/CommonResource.txt
+
+*** Test Cases ***
+新建主题
+    点击并检查页面跳转    通用_首页_BUTTON_主题    主题_首页_TITLE_主题
+    点击并检查页面跳转    主题_首页_BUTTON_新建主题    主题_新建_TITLE_新主题
+    输入文本    主题_新建_INPUT_主题名称    这是一个测试主题01
+    点击并检查页面跳转    主题_新建_BUTTON_添加    主题_首页_TITLE_主题
+    检查文本    这是一个测试主题01
+    [Teardown]    删除主题    这是一个测试主题01
+
+*** Keywords ***
+删除主题
+    [Arguments]    ${topic}
+    点击    //a[text()='${topic}']/../small
+    检查文本不存在    ${topic}

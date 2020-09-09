@@ -1,0 +1,11 @@
+*** Settings ***
+Documentation     用的业务关键字
+Resource          ../../resources/SeleniumResource.txt
+
+*** Keywords ***
+登录
+    [Documentation]    用户登录
+    点击并检查页面跳转    通用_首页_BUTTON_登录    登录_首页_TITLE_输入账号
+    输入文本    登录_首页_INPUT_用户名    ${LEARNING_LOG_CFG["username"]}
+    输入文本    登录_首页_INPUT_密码    ${LEARNING_LOG_CFG["password"]}
+    点击并检查页面跳转    登录_首页_BUTTON_登录    通用_首页_TEXT_你好
