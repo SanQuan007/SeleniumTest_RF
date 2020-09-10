@@ -33,7 +33,7 @@
 
 执行参数说明
 ---
-    -P C:\workspaces\SeleniumTest -V C:\workspaces\SeleniumTest\suite\_config\config.py  -d C:\workspaces\SeleniumTest\log 
+    -P C:\workspaces\SeleniumTest -V C:\workspaces\SeleniumTest\suite\_config\config.py -d C:\workspaces\SeleniumTest\log --extension txt:robot
     -P C:\workspaces\SeleniumTest：将-P后的路径临时加入path变量中，指定项目文件所在目录
     -V C:\workspaces\SeleniumTest\suite\_config\config.py：指定config文件所在目录
     -d C:\workspaces\SeleniumTest\log：指定输出文件的路径包括：日志、报告
