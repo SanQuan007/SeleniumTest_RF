@@ -23,14 +23,10 @@
   	│    └── SeleniumResources.txt        // 对已有的Selenium事务性操作进行再封装，例如：将点击和检查，放到一起封装为“点击并检查页面跳转”
   	├── suite                      
   	│    ├── _config        // 配置文件放置的地址，使用“_”为开头是为了使用RIDE打开时，不显示该目录
-  	│    ├── ProjectResources       // 测试对象业务步骤关键存放的目录，使用txt编写
+  	│    ├── ProjectResources       // 测试对象业务步骤关键字存放的目录，使用txt编写
   	│    └── TestCases        // 测试用例存放的目录，使用txt编写测试用例
   	├── tools                      
   	│    └── learning_log.zip        // web系统文件，需要解压后再点击“RunLearningLog.bat”来在本地启动
-  	├── tools                      
-  	│    ├── HTMLTestRunner.py        // html测试报告生成，支持用例失败重试，错误用例截图
-  	│    ├── CreatePY.py        // python脚本生成，读取Excel中的测试用例生成py测试文件
-  	│    └── AllTestRun.py        // 批量执行
   	├── varibles                      
   	│    └── locator.py        // 被测系统的locator统一存放在此文件
   	└── Readme.md        // help
